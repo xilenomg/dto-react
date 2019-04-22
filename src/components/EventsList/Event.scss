@@ -1,0 +1,86 @@
+.Event {
+  border: 1px solid #e2e3e8;
+  border-radius: 5px;
+  position: relative;
+  background: #fff;
+  position: relative;
+  margin-bottom: 30px;
+
+  &:last-child{
+    margin-bottom: 0px;
+  }
+
+  &:after,
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    transform: rotate(180deg);
+  }
+
+  &:after {
+    top: 10px;
+    border-color: transparent transparent transparent #ffffff;
+    border-width: 10px;
+  }
+
+  &:before {
+    top: 9px;
+    border-color: transparent transparent transparent #e2e3e8;
+    border-width: 11px;
+  }
+
+  .EventIcon {
+    position: absolute;
+    left: -42px;
+    top: 10px;
+    img{
+      width: 20px
+    }
+  }
+
+  .EventInfo {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    flex-wrap: wrap;
+    div {
+      flex-basis: 25%;
+      img {
+        height: 12px;
+        margin-right: 5px;
+      }
+    }
+  }
+  .EventProducts {
+    background: #f8f8f8;
+    .productRow {
+      margin: 0 10px;
+    }
+  }
+  .productRow {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 12px;
+    .productName {
+      flex-basis: 70%;
+      padding: 5px;
+    }
+    .productPrice {
+      flex-basis: 30%;
+      padding: 5px;
+    }
+    .productListHeader {
+      font-weight: bold;
+    }
+    &:last-child {
+      border-bottom: 0px;
+    }
+  }
+}
